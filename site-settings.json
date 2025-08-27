@@ -1,6 +1,6 @@
 {
 	"version": "2.8.0",
-	"mailpoet_api_key": "your_mailpoet_api_key",
+	"mailpoet_api_key": "b67753ce55967b119ba64b0d43d55e7e",
 	"mailpoet_list_id": "3",
 	"subcription_widget": {
 		"enable": true,
@@ -19,9 +19,9 @@
 	},
 	"top_banner": {
 		"enable": true,
-		"description": "-50% Intro price for the next 72 hours only!.",
+		"description": "-50% Intro price for making Banner Festival Poster!.",
 		"end_link": {
-			"url": "https://themeforest.net/item/ncmaz-nextjs-headless-wordpress-blog-magazine/47815656",
+			"url": "https://banner.org.in",
 			"text": "Buy now  →",
 			"new_tab": true
 		}
@@ -32,18 +32,18 @@
 		"sub_title": "Let's explore the most popular categories"
 	},
 	"site_info": {
-		"site_title": "Ncmaz Nextjs Blog",
-		"site_description": "Ncmaz Nextjs Blog headless WordPress",
-		"site_keywords": "Ncmaz Nextjs Blog",
-		"site_author": "ChisNghiax",
-		"site_email": "Your Email",
-		"site_phone": "Your Phone",
-		"site_address": "Your Address",
-		"site_city": "Your City",
-		"site_state": "Your State",
-		"site_zip": "Your Zip",
-		"site_country": "Your Country",
-		"site_url": "https://www.yoursite.com",
+		"site_title": "World Voice — Amplifying Global Stories, One Voice at a Time",
+		"site_description": "World Voice – Explore the latest in technology, business, sports, science, health, and global stories. Simplifying trends & amplifying voices worldwide.",
+		"site_keywords": "World Voice, worldvoice.in, tech news, technology blog, business updates, sports news, health tips, science trends, global stories, myths and facts, SEO tips, digital world, latest technology updates, world news blog",
+		"site_author": "Hanumant Nalwade",
+		"site_email": "hanumant@worldvoice.in",
+		"site_phone": "919403819090",
+		"site_address": "Pune",
+		"site_city": "Pune",
+		"site_state": "Maharashtra",
+		"site_zip": "414001",
+		"site_country": "India",
+		"site_url": "https://worldvoice.in",
 		"site_logo": "/logo.png",
 		"site_logo_light": "/logo-light.png",
 		"site_favicon": "/favicon.png"
@@ -51,25 +51,25 @@
 	"site_socials": [
 		{
 			"name": "facebook",
-			"url": "https://www.facebook.com/yourfacebookpage",
+			"url": "https://www.facebook.com/worldvoice.in",
 			"icon": "/images/socials/facebook.svg",
 			"description": "Follow us on Facebook"
 		},
 		{
 			"name": "twitter",
-			"url": "https://twitter.com/yourtwitterpage",
+			"url": "https://twitter.com/worldvoice.in",
 			"icon": "/images/socials/x-twitter.svg",
 			"description": "Follow us on Twitter"
 		},
 		{
 			"name": "github",
-			"url": "https://www.github.com/yourmediumpage",
+			"url": "https://www.github.com/worldvoice.in",
 			"icon": "/images/socials/github.svg",
 			"description": "Follow us on Github"
 		},
 		{
 			"name": "tiktok",
-			"url": "https://www.tiktok.com/yourtiktokpage",
+			"url": "https://www.tiktok.com/worldvoice.in",
 			"icon": "/images/socials/tiktok.svg",
 			"description": "Follow us on Tiktok"
 		}
@@ -82,7 +82,7 @@
 		}
 	},
 	"site_footer": {
-		"all_rights_reserved_text": "© 2024 BooliiTheme Company, Inc. All rights reserved."
+		"all_rights_reserved_text": "© 2025 worldvoice.in, Inc. All rights reserved."
 	},
 	"single_page": {
 		"show_view_cout": true,
@@ -204,7 +204,7 @@
 		"lost_password": {
 			"is_use_lostpassword_default_of_wp": false,
 			"message": "Lost password not implemented yet! Please contact admmin for support.",
-			"url_lostpassword_default_of_wp": "https://yourwebsite.com/wp-login.php?action=lostpassword"
+			"url_lostpassword_default_of_wp": "https://worldvoice.in/wp-login.php?action=lostpassword"
 		}
 	},
 	"mobile_nav_sidebar": {
@@ -227,17 +227,17 @@
 			{
 				"name": "address",
 				"title": "🚀 ADDRESS",
-				"desc": "123 Main Street, New York, NY 10001"
+				"desc": "Pune"
 			},
 			{
 				"name": "email",
 				"title": "💌 EMAIL",
-				"desc": "example@example.com"
+				"desc": "contact@worldvoice.in"
 			},
 			{
 				"name": "phone",
 				"title": "☎️ PHONE",
-				"desc": "+88 123 456 789"
+				"desc": "+91 9403819090"
 			},
 			{
 				"name": "working_hours",
