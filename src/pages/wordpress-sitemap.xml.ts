@@ -54,6 +54,11 @@ function formatDate(dateString: string): string {
 	return `${month}/${day}/${year} ${hours % 12 || 12}:${minutes} ${period}`
 }
 
+function formatDateForSitemap(dateString: string): string {
+	const date = new Date(dateString)
+	return date.toISOString()  // outputs in ISO 8601 format
+}
+
 // Sitemap component
 export default function WPSitemap() {}
 
@@ -72,7 +77,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		// Prepend the BASE_URL to the `uri`
 		acc.push({
 			loc: `${BASE_URL}${node.uri}`, // Ensure full URL is used
-			lastmod: node.modifiedGmt ? formatDate(node.modifiedGmt) : undefined, // Format lastmod date
+			lastmod: node.modifiedGmt ? formatDateForSitemap(node.modifiedGmt) : undefined, // Format lastmod date
 			changefreq: 'daily', // Set the change frequency to daily
 			priority: 0.8, // Set the priority to 0.8
 		})
