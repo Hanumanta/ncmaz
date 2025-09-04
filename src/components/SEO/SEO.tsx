@@ -31,7 +31,7 @@ export default function SEO({ title, description, imageUrl, url }: Props) {
         <meta property="og:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta name="yandex-verification" content="eee90e068eac599b" />
-        <meta property="og:url" content="https://mitwpu.edu.in/"></meta>
+        <meta property="og:url" content="https://worldvoice.in/"></meta>
 
         {title && (
           <>
