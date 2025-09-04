@@ -31,6 +31,7 @@ export default function SEO({ title, description, imageUrl, url }: Props) {
         <meta property="og:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta name="yandex-verification" content="eee90e068eac599b" />
+        <meta property="og:url" content="https://mitwpu.edu.in/"></meta>
 
         {title && (
           <>
@@ -45,9 +46,7 @@ export default function SEO({ title, description, imageUrl, url }: Props) {
           <>
             <meta name="description" content={descriptionNoHtmlTags} />
             <meta property="og:description" content={descriptionNoHtmlTags} />
-            <meta
-              property="twitter:description"
-              content={descriptionNoHtmlTags}
+            <meta property="twitter:description" content={descriptionNoHtmlTags}
             />
           </>
         )}
