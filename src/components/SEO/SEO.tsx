@@ -30,7 +30,6 @@ export default function SEO({ title, description, imageUrl, url }: Props) {
       <Head>
         <meta property="og:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta name="yandex-verification" content="eee90e068eac599b" />
 
         {title && (
           <>
