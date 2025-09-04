@@ -269,7 +269,7 @@
 	},
 	"discussion_settings": {
 		"enable": true,
-		"must_logged_in_to_comment": true
+		"must_logged_in_to_comment": false
 	},
 	"general_settings": {
 		"timeFormat": "h:mm a",
