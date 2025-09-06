@@ -25,6 +25,35 @@ export default function SEO({ title, description, imageUrl, url }: Props) {
 
   const descriptionNoHtmlTags = description?.replace(/<[^>]*>?/gm, "") || "";
 
+  function BlogPost() {
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "image": imageUrl,
+    "author": {
+      "@type": "Person",
+      "name": "Hanumant Nalwade"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "World Voice | Amplifying Global Stories, One Voice at a Time - World Voice",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://worldvoice.in/_next/image/?url=%2Flogo.png&w=128&q=75"
+      }
+    },
+    "datePublished": "2025-09-06T10:00:00+05:30",
+    "dateModified": "2025-09-06T12:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      
+    }
+  }
+
+
+
   return (
     <>
       <Head>
@@ -64,7 +93,16 @@ export default function SEO({ title, description, imageUrl, url }: Props) {
             <meta property="twitter:url" content={url} />
           </>
         )}
+
+        {/* BlogPosting Schema */}
+        <script 
+          type="application/ld+json" 
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} 
+        />
+        
+
       </Head>
     </>
   );
+}
 }
