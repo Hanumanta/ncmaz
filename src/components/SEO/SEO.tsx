@@ -32,32 +32,31 @@ export default function SEO({
   dateModified = "2025-09-08",
   authorName = "Admin",
   publisherName = "World Voice",
-  publisherLogo = "https://worldvoice.in/_next/image/?url=%2Flogo.png",
+  publisherLogo = "https://worldvoice.in/_next/image/?url=%2Flogo.png&w=128&q=75",
 }: Props) {
   if (!title && !description && !imageUrl && !url) {
     return null;
   }
 
   const descriptionNoHtmlTags = description?.replace(/<[^>]*>?/gm, "") || "";
-
-  // ✅ BlogPosting schema
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: title,
-    description: descriptionNoHtmlTags,
-    image: imageUrl ? { "@type": "ImageObject", url: imageUrl } : undefined,
-    author: { "@type": "Person", name: authorName },
-    publisher: {
-      "@type": "Organization",
-      name: publisherName,
-      logo: { "@type": "ImageObject", url: publisherLogo },
-    },
-    url: url,
-    mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    datePublished,
-    dateModified,
-  };
+    // ✅ BlogPosting schema
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: title,
+        description: descriptionNoHtmlTags,
+        image: imageUrl ? { "@type": "ImageObject", url: imageUrl } : undefined,
+        author: { "@type": "Person", name: authorName },
+        publisher: {
+          "@type": "Organization",
+          name: publisherName,
+          logo: { "@type": "ImageObject", url: publisherLogo },
+        },
+        url: url,
+        mainEntityOfPage: { "@type": "WebPage", "@id": url },
+        datePublished,
+        dateModified,
+      };
 
   return (
     <>
@@ -98,7 +97,6 @@ export default function SEO({
             <meta property="twitter:url" content={url} />
           </>
         )}
-
 
       </Head>
     </>
