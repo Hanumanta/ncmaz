@@ -5,6 +5,11 @@ interface Props {
   description?: string | null;
   imageUrl?: string | null;
   url?: string | null;
+  datePublished?: string | null;
+  dateModified?: string | null;
+  authorName?: string | null;
+  publisherName?: string | null;
+  publisherLogo?: string | null;
 }
 
 /**
@@ -18,12 +23,41 @@ interface Props {
  *
  * @returns {React.ReactElement} The SEO component
  */
-export default function SEO({ title, description, imageUrl, url }: Props) {
+export default function SEO({
+  title,
+  description,
+  imageUrl,
+  url,
+  datePublished = "2025-09-08",
+  dateModified = "2025-09-08",
+  authorName = "Admin",
+  publisherName = "World Voice",
+  publisherLogo = "https://worldvoice.in/_next/image/?url=%2Flogo.png",
+}: Props) {
   if (!title && !description && !imageUrl && !url) {
     return null;
   }
 
   const descriptionNoHtmlTags = description?.replace(/<[^>]*>?/gm, "") || "";
+
+  // ✅ BlogPosting schema
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description: descriptionNoHtmlTags,
+    image: imageUrl ? { "@type": "ImageObject", url: imageUrl } : undefined,
+    author: { "@type": "Person", name: authorName },
+    publisher: {
+      "@type": "Organization",
+      name: publisherName,
+      logo: { "@type": "ImageObject", url: publisherLogo },
+    },
+    url: url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    datePublished,
+    dateModified,
+  };
 
   return (
     <>

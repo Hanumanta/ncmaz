@@ -11,12 +11,16 @@ function v(href: string) {
 
 export default class Document extends NextDocument {
 	// @ts-ignore
+
 	static async getInitialProps(ctx) {
 		const initialProps = await NextDocument.getInitialProps(ctx)
 		return { ...initialProps }
 	}
 
 	render() {
+
+
+
 		return (
 			<Html
 				lang="en"
@@ -24,6 +28,8 @@ export default class Document extends NextDocument {
 				dir={process.env.NEXT_PUBLIC_SITE_DIRECTION}
 			>
 				<Head>
+
+				
 					<link
 						href={`${SITE_URL}/api/feeds/feed.json`}
 						rel="alternate"
