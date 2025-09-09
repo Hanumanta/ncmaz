@@ -98,6 +98,12 @@ export default function SEO({
           </>
         )}
 
+        {/* ✅ Inject JSON-LD schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+
       </Head>
     </>
   );
