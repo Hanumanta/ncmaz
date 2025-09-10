@@ -34,6 +34,15 @@ const PageLayout: FC<Props> = ({
         title={(pageTitle || "") + " - " + (generalSettings?.title || "")}
         description={pageDescription || generalSettings?.description || ""}
         imageUrl={pageFeaturedImageUrl}
+        name="World Voice"      
+        url="https://worldvoice.in/"
+        logo="https://worldvoice.in/_next/image/?url=%2Flogo.png&w=128&q=75"
+        telephone = "+91 9403819090"
+        streetAddress = "Near Ganesh Temple"
+        addressLocality = "Latur"
+        addressRegion = "Maharashta"
+        postalCode = "413512"
+        addressCountry = "IN"
       />
 
       <SiteHeader

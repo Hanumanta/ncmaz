@@ -10,6 +10,14 @@ interface Props {
   authorName?: string | null;
   publisherName?: string | null;
   publisherLogo?: string | null;
+  name: string;
+  logo: string;
+  telephone?: string;
+  streetAddress?: string;
+  addressLocality?: string;
+  addressRegion?: string;
+  postalCode?: string;
+  addressCountry?: string;
 }
 
 /**
@@ -33,6 +41,14 @@ export default function SEO({
   authorName = "Admin",
   publisherName = "World Voice",
   publisherLogo = "https://worldvoice.in/_next/image/?url=%2Flogo.png&w=128&q=75",
+  name,
+  logo,
+  telephone,
+  streetAddress,
+  addressLocality,
+  addressRegion,
+  postalCode,
+  addressCountry,
 }: Props) {
   if (!title && !description && !imageUrl && !url) {
     return null;
@@ -57,6 +73,32 @@ export default function SEO({
         datePublished,
         dateModified,
       };
+
+      const OrganizationschemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name,
+    url,
+    logo,
+    ...(telephone && { telephone }),
+    ...(streetAddress && {
+      address: {
+        "@type": "PostalAddress",
+        streetAddress,
+        addressLocality,
+        addressRegion,
+        postalCode,
+        addressCountry,
+      },
+    }),
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: telephone || "",
+      contactType: "Customer Service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi", "Marathi"],
+    },
+  };
 
   return (
     <>
@@ -102,6 +144,11 @@ export default function SEO({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(OrganizationschemaData) }}
         />
 
       </Head>
