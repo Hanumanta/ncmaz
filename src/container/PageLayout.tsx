@@ -9,6 +9,7 @@ import {
 } from "@/fragments/menu";
 import { NcgeneralSettingsFieldsFragmentFragment } from "@/__generated__/graphql";
 
+
 interface Props {
   children: React.ReactNode;
   pageTitle?: string | null | undefined;
@@ -34,7 +35,12 @@ const PageLayout: FC<Props> = ({
         title={(pageTitle || "") + " - " + (generalSettings?.title || "")}
         description={pageDescription || generalSettings?.description || ""}
         imageUrl={pageFeaturedImageUrl}
-        name="World Voice"      
+        name="World Voice"
+        datePublished = "2025-09-08T10:30:00+05:30"
+        dateModified = "2025-09-08T14:45:00+05:30"
+        authorName = "Hanumant Nalwade"
+        publisherName = "World Voice"
+        publisherLogo = "https://worldvoice.in/_next/image/?url=%2Flogo.png&w=128&q=75"      
         url="https://worldvoice.in/"
         logo="https://worldvoice.in/_next/image/?url=%2Flogo.png&w=128&q=75"
         telephone = "+91 9403819090"
