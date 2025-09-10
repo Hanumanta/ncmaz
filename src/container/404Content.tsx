@@ -10,6 +10,15 @@ export default function Page404Content() {
 			<SEO
 				title={'This page does not exist (404)'}
 				description={'Sorry, we couldn’t find the page you’re looking for.'}
+				name="World Voice"      
+				url="https://worldvoice.in/"
+				logo="https://worldvoice.in/_next/image/?url=%2Flogo.png&w=128&q=75"
+				telephone = "+91 9403819090"
+				streetAddress = "Near Ganesh Temple"
+				addressLocality = "Latur"
+				addressRegion = "Maharashta"
+				postalCode = "413512"
+				addressCountry = "IN"
 			/>
 
 			<main className="mx-auto w-full max-w-7xl px-6 pb-16 pt-5 sm:pb-20 lg:px-8">
