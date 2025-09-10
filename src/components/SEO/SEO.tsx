@@ -8,6 +8,7 @@ interface Props {
   datePublished?: string | null;
   dateModified?: string | null;
   authorName?: string | null;
+  authorUrl?: string | null;
   publisherName?: string | null;
   publisherLogo?: string | null;
   name: string;
@@ -39,6 +40,7 @@ export default function SEO({
   datePublished,
   dateModified,
   authorName,
+  authorUrl,
   publisherName,
   publisherLogo,
   name,
@@ -62,7 +64,7 @@ export default function SEO({
         headline: title,
         description: descriptionNoHtmlTags,
         image: imageUrl ? { "@type": "ImageObject", url: imageUrl } : undefined,
-        author: { "@type": "Person", name: authorName },
+        author: { "@type": "Person", name: authorName, url: authorUrl },
         publisher: {
           "@type": "Organization",
           name: publisherName,
@@ -79,6 +81,7 @@ export default function SEO({
     "@type": "Organization",
     name,
     url,
+    image: imageUrl ? { "@type": "ImageObject", url: imageUrl } : undefined,
     logo,
     ...(telephone && { telephone }),
     ...(streetAddress && {

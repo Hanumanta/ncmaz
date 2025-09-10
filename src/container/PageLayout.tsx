@@ -39,6 +39,7 @@ const PageLayout: FC<Props> = ({
         datePublished = "2025-09-08T10:30:00+05:30"
         dateModified = "2025-09-08T14:45:00+05:30"
         authorName = "Hanumant Nalwade"
+        authorUrl = "https://worldvoice.in/author/admin/"
         publisherName = "World Voice"
         publisherLogo = "https://worldvoice.in/_next/image/?url=%2Flogo.png&w=128&q=75"      
         url="https://worldvoice.in/"
