@@ -103,6 +103,29 @@ export default function SEO({
     },
   };
 
+
+  const NewsschemaData = {
+    "@context": "https://schema.org",
+    "@type":"NewsArticle", // can be NewsArticle, BlogPosting, etc.
+    headline: title,
+    description: descriptionNoHtmlTags,
+    image: imageUrl ? { "@type": "ImageObject", url: imageUrl } : undefined,
+    author: {
+      "@type": "Person",
+      name: authorName,
+      url: authorUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: publisherName,
+      logo: { "@type": "ImageObject", url: publisherLogo },
+    },
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    datePublished,
+    dateModified,
+  };
+
   return (
     <>
       <Head>
@@ -152,6 +175,11 @@ export default function SEO({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(OrganizationschemaData) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(NewsschemaData) }}
         />
 
       </Head>
