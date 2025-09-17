@@ -182,6 +182,25 @@ export default function SEO({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(NewsschemaData) }}
         />
 
+        <script
+          async
+          src="https://news.google.com/swg/js/v1/swg-basic.js"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (self.SWG_BASIC = self.SWG_BASIC || []).push(basicSubscriptions => {
+                basicSubscriptions.init({
+                  type: "NewsArticle",
+                  isPartOfType: ["Product"],
+                  isPartOfProductId: "CAoww5m-DA:openaccess",
+                  clientOptions: { theme: "light", lang: "en" },
+                });
+              });
+            `,
+          }}
+        />
+
       </Head>
     </>
   );
