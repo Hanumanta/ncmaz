@@ -132,6 +132,7 @@ export default function SEO({
         <meta property="og:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta name="yandex-verification" content="eee90e068eac599b" />
+        <meta name="google-adsense-account" content="ca-pub-2624477775764147"></meta>
         <meta property="og:url" content="https://worldvoice.in/"></meta>
 
         {title && (
