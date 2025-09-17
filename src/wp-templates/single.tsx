@@ -25,6 +25,7 @@ import { TCategoryCardFull } from '@/components/CardCategory1/CardCategory1'
 import SingleTypeAudio from '@/container/singles/single-audio/single-audio'
 import SingleTypeVideo from '@/container/singles/single-video/single-video'
 import SingleTypeGallery from '@/container/singles/single-gallery/single-gallery'
+import AdSense from '@/components/AdSense';
 
 const DynamicSingleRelatedPosts = dynamic(
 	() => import('@/container/singles/SingleRelatedPosts'),
@@ -196,6 +197,7 @@ const Component: FaustTemplate<GetPostSiglePageQuery> = (props) => {
 								<div className="w-full lg:w-3/5 xl:w-2/3 xl:pe-20">
 									<SingleContent post={_post} />
 								</div>
+								<AdSense client="ca-pub-2624477775764147" slot="6355337272" />
 								<div className="mt-12 w-full lg:mt-0 lg:w-2/5 lg:ps-10 xl:w-1/3 xl:ps-0">
 									<Sidebar categories={_top10Categories} />
 								</div>

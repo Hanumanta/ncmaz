@@ -95,6 +95,20 @@ export default class Document extends NextDocument {
 							`,
 						}}
 					/>
+					<meta
+          httpEquiv="Content-Security-Policy"
+          content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com https://www.googletagservices.com"
+        />
+         
+        <script
+           async
+           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2624477775764147"
+           crossOrigin="anonymous"
+         />
+
+
+
+
 				</Head>
 				<body className="relative bg-white text-base text-neutral-900 dark:bg-neutral-900/95 dark:text-neutral-100">
 					<Main />
