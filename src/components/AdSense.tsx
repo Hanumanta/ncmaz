@@ -9,7 +9,9 @@ interface AdSenseProps {
 const AdSense: React.FC<AdSenseProps> = ({ client, slot, style }) => {
   useEffect(() => {
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+       if (typeof window !== "undefined") {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
     } catch (err) {
       console.error(err);
     }
